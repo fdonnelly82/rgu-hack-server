@@ -8,7 +8,7 @@ var http = require('http');
 //setup our port
 var port = process.env.PORT || 1337;
 
-
+//url to connect to database
 var url = '  mongodb://fdonnelly:drone101@ds030829.mlab.com:30829/drone';
 
 //We need to work with "MongoClient" interface in order to connect to a mongodb server.
