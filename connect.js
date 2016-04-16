@@ -9,11 +9,10 @@ var http = require('http');
 var port = process.env.PORT || 1337;
 
 //url to connect to database
-var url = '  mongodb://fdonnelly:drone101@ds030829.mlab.com:30829/drone';
+var url = 'mongodb://fdonnelly:drone101@ds030829.mlab.com:30829/drone';
 
 //We need to work with "MongoClient" interface in order to connect to a mongodb server.
 var MongoClient = mongodb.MongoClient;
-
 
 http.createServer(function(request, response) {
     response.writeHead(200, { 'Content-Type': 'text/plain' });
@@ -23,14 +22,13 @@ http.createServer(function(request, response) {
         response.write('Connection Made \n');
         if (err) {
             response.write('Unable to connect to the mongoDB server. Error:' + err + "\n");
-            //Error so close connection
-            db.close();
         } else {
             //HURRAY!! We are connected. :)
             response.write('Connection established to' + url +"\n");
 
             // do some work here with the database.
-            //Done Close connection
+
+            //Close connection
             db.close();
         }
         response.end('Finished, Connection closed \n');
