@@ -10,14 +10,19 @@
 	<script src="/node_modules/leapjs/leap-0.6.2.js"></script>
 	<script src="/leap.js"></script>
 	<script src="node_modules/dronestream/dist/nodecopter-client.js"></script>
-	<script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+	<!--<script>
 	  $(function () {
       function startArDRoneStream() {
         new NodecopterStream(document.getElementById("placeholder"), {port: 3001});
       }
       startArDRoneStream();
     })
-	</script>
+
+	</script>-->
+
+
 	<h1>Motion controlled AR Drone using the Leap Motion </h1>
 	<h4>With live video streaming</h4>
 	<table>
@@ -58,6 +63,21 @@
 	<script src="/client.js"></script>
 	<script src="/leap.js"></script>
 
-	<button type="button">Land Drone</button>
+
+		<button class="land">Land Drone</button>
+
 	</body>
+<script>
+	$(document).ready(function () {
+		$(".land").click(
+				function () {
+					AlertUser();
+				});
+	});
+
+	function AlertUser() {
+		alert("Drone Landing");
+	}
+
+</script>
 </html>
