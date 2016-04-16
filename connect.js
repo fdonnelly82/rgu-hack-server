@@ -24,7 +24,7 @@ http.createServer(function(request, response) {
             response.write('Unable to connect to the mongoDB server. Error:' + err + "\n");
         } else {
             //HURRAY!! We are connected. :)
-            response.write('Connection established to' + url +"\n");
+            response.write('Connection established!' + "\n");
 
             // do some work here with the database.
 
