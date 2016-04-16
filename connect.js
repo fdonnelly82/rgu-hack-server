@@ -8,7 +8,7 @@ var http = require('http');
 
 var port = process.env.PORT || 1337;
 
-var url = '  mongodb://<fdonnelly>:<drone101>@ds030829.mlab.com:30829/drone';
+var url = '  mongodb://fdonnelly:drone101@ds030829.mlab.com:30829/drone';
 
 var MongoClient = mongodb.MongoClient;
 
